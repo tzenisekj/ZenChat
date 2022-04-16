@@ -33,6 +33,6 @@ app.use("/api/auth", authRoute);
 
 // server root 
 // - port 8800
-app.listen(8800,() => {
+app.listen(8080,() => {
     console.log("Backend Server Started..."); 
 })
