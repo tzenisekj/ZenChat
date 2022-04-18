@@ -4,7 +4,8 @@ const app = express();
 
 // routes 
 const userRoute = require("./routes/users"); 
-const authRoute = require("./routes/auth"); 
+const authRoute = require("./middlewear/auth"); 
+const postRoute = require("./routes/posts")
 
 // .env file library 
 const dotenv = require("dotenv"); 
@@ -30,9 +31,10 @@ app.use(morgan("common"));
 // routes 
 app.use("/api/users", userRoute); 
 app.use("/api/auth", authRoute); 
+app.use("/api/posts", postRoute)
 
 // server root 
 // - port 8800
-app.listen(8080,() => {
+app.listen(3000,() => {
     console.log("Backend Server Started..."); 
 })
