@@ -31,7 +31,7 @@ const UserSchema = mongoose.Schema({
         type:Array,
         default:[]
     },
-    following:{
+    followings:{
         type:Array,
         default:[]
     },
@@ -54,6 +54,9 @@ const UserSchema = mongoose.Schema({
     relationship:{
         type:Number,
         enum:[1,2,3]
+    },
+    token:{
+        type:String
     }
 },
     {timestamps:true}
