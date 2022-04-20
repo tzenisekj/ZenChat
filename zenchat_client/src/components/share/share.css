@@ -1,0 +1,73 @@
+.feed-share {
+    width: 100%; 
+    height: 170px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.37);
+    box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.37);
+    padding: 10px;
+}
+
+.feed-share-top {
+    display: flex; 
+    align-items: center;
+}
+ 
+ .feed-share-profile-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.feed-share-input {
+    border: none;
+    width: 80%;
+}
+
+.feed-share-input:focus {
+    outline: none; 
+}
+
+.feed-share-hr {
+    margin: 20px; 
+}
+
+.feed-share-bottom {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feed-share-options {
+    display: flex; 
+    margin-left: 20px;
+}
+
+.feed-share-option {
+    display: flex; 
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.feed-share-option-icon {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.feed-share-option-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.feed-share-btn {
+    border: none;
+    padding: 7px; 
+    border-radius: 5px; 
+    background-color: green;
+    font-weight: 500;
+    margin-right: 20px;
+    cursor: pointer;
+    color: white;
+}

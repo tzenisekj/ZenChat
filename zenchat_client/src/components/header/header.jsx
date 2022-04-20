@@ -1,7 +1,7 @@
 import "./header.css"
 import { Search } from '@material-ui/icons'
 
-export default function header() {
+export default function Header() {
   return (
     <header>
         <div className="header-container">
