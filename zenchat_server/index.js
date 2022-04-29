@@ -4,7 +4,7 @@ const app = express();
 
 // routes 
 const userRoute = require("./routes/users"); 
-const authRoute = require("./middlewear/auth"); 
+const userAuthRoute = require("./routes/userAuth"); 
 const postRoute = require("./routes/posts")
 
 // .env file library 
@@ -30,7 +30,7 @@ app.use(morgan("common"));
 
 // routes 
 app.use("/api/users", userRoute); 
-app.use("/api/auth", authRoute); 
+app.use("/api/auth", userAuthRoute); 
 app.use("/api/posts", postRoute)
 
 // server root 
