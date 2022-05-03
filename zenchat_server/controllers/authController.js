@@ -1,5 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
+const jwt = require('jsonwebtoken');
+require('dotenv').config(); 
 
 const registerUser = async (req,res) => {
     try {
@@ -32,7 +34,16 @@ const loginUser = async (req,res) => {
             res.status(400).json("Invalid password!")
         }
 
-        res.status(200).json(user);
+        // create JWT
+        const accessToken = jwt.sign({"username": req.body.username}, process.env.ACCESS_TOKEN_SECRET,{ expiresIn: '30s'})
+
+        const refreshToken = jwt.sign({"username": req.body.username}, process.env.REFRESH_TOKEN_SECRET,{ expiresIn: '1d'})
+
+        user = await User.updateOne({_id: user._id}, { $set: {token: refreshToken}})
+
+        res.cookie('jwt', refreshToken, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000 })
+
+        res.status(200).json({accessToken});
     } catch(err) {
         res.status(500).json(err)
     }
