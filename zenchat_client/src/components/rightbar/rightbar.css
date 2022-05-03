@@ -1,3 +1,40 @@
 .rightbar-container {
     flex: 3.5; 
 }
+
+.rightbar-title {
+    margin-bottom: 20px;
+}
+
+.rightbar-online-friend-list-item {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rightbar-online-friend-img-container {
+    margin-right: 10px;
+    position: relative; 
+}
+
+.rightbar-online-friend-img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rightbar-online {
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%;
+    background-color: limegreen;
+    position: absolute; 
+    top: -2px;
+    right: 0;
+    border: 2px solid white; 
+}
+
+.rightbar-online-username {
+    font-weight: 500;
+}

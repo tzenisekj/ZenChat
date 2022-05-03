@@ -11,8 +11,8 @@
     display: flex; 
     align-items: center;
 }
- 
- .feed-share-profile-img {
+
+.feed-share-profile-img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
